@@ -1,0 +1,31 @@
+---
+---
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">Stefano Benatti</h1>
+    <button class="hamburger" id="menu-toggle">☰</button>
+    <nav class="nav" id="mobile-menu">
+      <a href="#about">Chi sono</a>
+      <a href="#skills">Competenze</a>
+      <a href="#projects">Cosa faccio</a>
+      <a href="#contact">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const hamburger = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  
+  hamburger?.addEventListener('click', () => {
+    menu?.classList.toggle('mobile-open');
+  });
+  
+  // Close menu when a link is clicked
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('mobile-open');
+    });
+  });
+</script>
