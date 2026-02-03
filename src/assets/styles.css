@@ -27,6 +27,8 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;back
 @media (max-width:640px){
   .site-header{position:fixed;top:0;left:0;width:100%;z-index:1000;border-bottom:1px solid rgba(61,40,23,0.15)}
   main.container{padding-top:80px}
+  .hero{padding:24px 0;text-align:center}
+  .hero-content{flex-direction:column}
   .hamburger{display:block}
   .nav-desktop{display:none}
   .nav-mobile{display:flex;flex-direction:column;max-height:0;overflow:hidden;transition:max-height 0.3s ease;padding:0;gap:0}
