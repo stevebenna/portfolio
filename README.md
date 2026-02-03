@@ -1,32 +1,36 @@
-# Astro Starter Kit: Basics
+# Portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+A modern portfolio website built with Astro, showcasing projects and professional work.
 
 ## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+├── src/
+│   ├── assets/
+│   │   └── styles.css
+│   ├── components/
+│   │   ├── Footer.astro
+│   │   ├── Header.astro
+│   │   ├── ProjectCard.astro
+│   │   └── Welcome.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+├── astro.config.mjs
+├── tsconfig.json
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 📦 Components
+
+- **Header.astro** - Navigation header for site navigation and branding
+- **Footer.astro** - Footer section with links and information
+- **ProjectCard.astro** - Reusable component for displaying individual projects
+- **Welcome.astro** - Hero/welcome section for the landing page
+- **Layout.astro** - Base layout wrapper for all pages
 
 ## 🧞 Commands
 
