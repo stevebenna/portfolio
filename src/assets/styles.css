@@ -6,23 +6,35 @@
 }
 
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:#faf8f3;color:#3d2817}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:#faf8f3;color:#3d2817;scroll-behavior:smooth}
 .container{max-width:1000px;margin:0 auto;padding:24px}
 
-.site-header{border-bottom:1px solid rgba(61,40,23,0.15);background:transparent}
-.site-title{margin:0;display:inline-block;font-size:20px;color:#3d2817}
-.nav{float:right;display:flex;gap:18px}
+.site-header{background:#faf8f3}
+.header-top .container{display:flex;justify-content:space-between;align-items:center}
+.site-title{margin:0;font-size:20px;color:#3d2817}
+.nav{display:flex;gap:18px}
 .nav a{color:#5a4033;text-decoration:none}
 .nav a:hover{color:#3d2817}
 
-.hamburger{display:none;background:none;border:none;color:#3d2817;font-size:24px;cursor:pointer}
-.nav.mobile-open{display:flex;flex-direction:column;position:absolute;top:60px;right:24px;background:rgba(250,248,243,0.95);padding:16px;border-radius:8px;gap:8px;width:200px}
-.nav.mobile-open a{padding:8px 0}
+.hamburger{display:none;background:none;border:none;color:#3d2817;cursor:pointer;width:30px;height:24px;position:relative;padding:0;z-index:10}
+.hamburger span{display:block;width:100%;height:2px;background:#3d2817;margin:6px 0;transition:all 0.3s ease}
+.hamburger.active span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+.nav-mobile{display:none}
 
 @media (max-width:640px){
+  .site-header{position:fixed;top:0;left:0;width:100%;z-index:1000;border-bottom:1px solid rgba(61,40,23,0.15)}
+  main.container{padding-top:80px}
+  .hero{padding:24px 0;text-align:center}
+  .hero-content{flex-direction:column}
   .hamburger{display:block}
-  .nav{display:none;float:none;flex-direction:column}
-  .nav.mobile-open{display:flex}
+  .nav-desktop{display:none}
+  .nav-mobile{display:flex;flex-direction:column;max-height:0;overflow:hidden;transition:max-height 0.3s ease;padding:0;gap:0}
+  .nav-mobile.mobile-open{max-height:200px}
+  .nav-mobile a{padding:12px 24px;font-size:15px;transition:background 0.2s ease}
+  .nav-mobile a:hover{background:rgba(61,40,23,0.03)}
 }
 
 .hero{padding:48px 0;text-align:left}
