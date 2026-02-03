@@ -2,30 +2,46 @@
 ---
 
 <header class="site-header">
-  <div class="container">
-    <h1 class="site-title">Stefano Benatti</h1>
-    <button class="hamburger" id="menu-toggle">☰</button>
-    <nav class="nav" id="mobile-menu">
+  <div class="header-top">
+    <div class="container">
+      <h1 class="site-title">Stefano Benatti</h1>
+      <button class="hamburger" id="menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav nav-desktop">
+        <a href="#about">Chi sono</a>
+        <a href="#skills">Competenze</a>
+        <a href="#projects">Cosa faccio</a>
+        <a href="#contact">Contatti</a>
+      </nav>
+    </div>
+    <nav class="nav nav-mobile" id="mobile-menu">
       <a href="#about">Chi sono</a>
       <a href="#skills">Competenze</a>
       <a href="#projects">Cosa faccio</a>
       <a href="#contact">Contatti</a>
     </nav>
   </div>
+
 </header>
 
 <script>
   const hamburger = document.getElementById('menu-toggle');
   const menu = document.getElementById('mobile-menu');
-  
+  const header = document.querySelector('.site-header');
+
   hamburger?.addEventListener('click', () => {
     menu?.classList.toggle('mobile-open');
+    hamburger?.classList.toggle('active');
   });
-  
+
   // Close menu when a link is clicked
   menu?.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       menu.classList.remove('mobile-open');
+      hamburger?.classList.remove('active');
     });
   });
 </script>
