@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import { ChevronsLeftRightEllipsis, Mic, Form } from 'lucide-astro';
+import { ChevronsLeftRightEllipsis, Mic, Form, Mail } from 'lucide-astro';
 ---
 
 <Layout>
@@ -16,7 +16,7 @@ import { ChevronsLeftRightEllipsis, Mic, Form } from 'lucide-astro';
 				<div>
 					<h2>Ciao, sono Stivv</h2>
 					<p class="muted">Sono uno sviluppatore back-end e project manager con 10 anni di esperienza.</p>
-					<p class="muted">Sì, il layout del sito è brutto e vibe-coddato perché non ho gusti nel design.</p>
+					<p class="muted">Sì, il layout del sito è brutto e vibe-coddato perché non ho gusto né competenze nel design.</p>
 				</div>
 			</div>
 		</section>
@@ -25,9 +25,8 @@ import { ChevronsLeftRightEllipsis, Mic, Form } from 'lucide-astro';
 			<p class="muted">Comincio a lavorare nel 2016 come analista programmatore presso CPL Concordia, occupandomi di controllare e segnalare malfunzionamenti su portali di fatturazione luce e gas rivolti ai clienti e di redigerne le guide, intervenendo di tanto in tanto sui database.</p>
 			<p>Terminato il tirocinio ho inseguito il mio obiettivo di diventare un programmatore a tutti gli effetti, cominciando a lavorare per Rewind e Altuofianco come web developer, sviluppando e mantenendo i CRM aziendali.</p>
 			<p>Inizialmente sviluppatore web in linguaggio PHP e Javascript, nel 2017/2018 ho contribuito alla creazione di un framework PHP personalizzato per il sito avvocatoaltuofianco.it.</p>
-			<p>A partire dal 2019 ho cominciato a interessarmi a diversi framework per migliorare le tecnologie aziendali.</p>
 			<p>Nel 2024 ho contribuito, dopo anni di sviluppo, alla pubblicazione del nuovo CRM aziendale a microservizi basato su Next.js e CodeIgniter.</p>
-			<p>Dal 2025 ricopro anche il ruolo di Web App Project Manager.</p>
+			<p>Dal 2025 ricopro anche il ruolo di Digital Project Manager, redigendo progetti funzionali e coordinando il team per lo sviluppo di gestionali rivolti ai clienti del gruppo.</p>
 		</section>
 		<section id="skills" class="section">
 			<h2>Competenze</h2>
@@ -42,7 +41,7 @@ import { ChevronsLeftRightEllipsis, Mic, Form } from 'lucide-astro';
 				</div>
 				<div class="skill-item">
 					<ChevronsLeftRightEllipsis size={24} class="icon" />
-					<span>Javascript</span>
+					<span>Javascript (React, Next.js, Node)</span>
 				</div>
 				<div class="skill-item">
 					<Form size={24} class="icon" />
@@ -65,7 +64,12 @@ import { ChevronsLeftRightEllipsis, Mic, Form } from 'lucide-astro';
 
 		<section id="contact" class="section">
 			<h2>Contatti</h2>
-			<p class="muted"><a href="mailto:24.benattistefano@gmail.com">24.benattistefano@gmail.com</a></p>
+			<p class="muted">
+				<a class="skill-item" href="mailto:24.benattistefano@gmail.com" style="color:var(--accent);">
+					<Mail size={24} class="icon-inline" />
+					<span>24.benattistefano@gmail.com</span>
+				</a>
+			</p>
 		</section>
 	</main>
 

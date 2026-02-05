@@ -58,4 +58,4 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;back
 .site-footer{border-top:1px solid rgba(61,40,23,0.15);padding:24px 0;color:#6b5344}
 
 a{color:#5a4033}
-a:hover{color:#3d2817}
+a:hover{color:var(--bg)}
